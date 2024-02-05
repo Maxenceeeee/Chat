@@ -51,8 +51,24 @@
          <br />
          <button class="btn" type="submit"><a href="connexion.php">Déjà enregistré ? Connectez vous !</a></button>
       </form>
-      </div>
-      <br>
+   </div>
+   <br>
+
+   <script>
+      document.getElementById('inscription').addEventListener('submit', function (event) {
+         var nom = document.getElementById('nom').value;
+         var prenom = document.getElementById('prenom').value;
+         var pseudo = document.getElementById('pseudo').value;
+         var mail = document.getElementById('mail').value;
+         var mdp = document.getElementById('mdp').value;
+
+         if (nom === '' || prenom === '' || pseudo === '' || mail === '' || mdp === '') {
+            alert('Veuillez remplir tous les champs du formulaire.');
+            event.preventDefault();
+         }
+      });
+
+   </script>
 
 </body>
 
