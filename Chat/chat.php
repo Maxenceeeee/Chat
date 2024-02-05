@@ -1,47 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
 
     <title>Chat</title>
     <style>
-*{
-    margin: 0;
-    padding:0;
-    box-sizing: border-box;
-    font-family: sans-serif;
-    overflow: hidden;
-}
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: sans-serif;
+            overflow: hidden;
+        }
 
-body{
-    height: 100vh;
-}
+        body {
+            height: 100vh;
+        }
 
-#messages{
- 
-    overflow-y: scroll;
-    scrollbar-width: thin;
-    border-radius: 10px;
-    border: 1px solid #1f1d1d;
-    height: 350px;
-    padding: 10px;
-    margin-left: 33%;
-    margin-right: 34%;
-    margin-top: 4%;
-    word-wrap: break-word;  
-    
-}
- 
+        #messages {
 
-</style>
+            overflow-y: scroll;
+            scrollbar-width: thin;
+            border-radius: 10px;
+            border: 1px solid #1f1d1d;
+            height: 350px;
+            padding: 10px;
+            margin-left: 33%;
+            margin-right: 34%;
+            margin-top: 4%;
+            word-wrap: break-word;
+
+        }
+    </style>
 </head>
+
 <body>
-    <div id="messages"></div>
-    <form action="">
-        <input id="msg" autocomplete="off" /> <button>Envoyer</button>
+    <div id="messages">
+
+    </div>
+    <form action="traitementmessage.php">
+        <label for="msg">Votre message</label>
+        <br />
+        <input type="text" id="msg" name="msg" />
+        <button class="btn" type="submit">Envoyer</button>
     </form>
-    
-    <script>
+
+    <!--    <script>
 const form = document.querySelector('form');
 
 form.addEventListener('submit', function(event) {
@@ -59,6 +64,7 @@ form.addEventListener('submit', function(event) {
 });
 
 </script>
-
+!-->
 </body>
+
 </html>
